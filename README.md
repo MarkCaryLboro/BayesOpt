@@ -21,4 +21,4 @@ List of live scripts
 
 BayesOptExample.mlx - A simple example maximising the function x.sin(x) in the interval 0<=x<=10.
                       Shows how the objects and classes are combined to maximise the target
-                      function
+                      function. Tested 11/08/2022

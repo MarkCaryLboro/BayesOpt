@@ -1,6 +1,11 @@
 A group of classes to implement the Bayesian Optimisation algorithm. Several
 surrogate models and acquisition function approaches are implemented.
 
+Developped with MatLab version R2022a Update 2
+Requires Toolboxes
+- Optimisation Toolbox
+- Statistics and Machine Learning Toolbox
+
 List of classes:
 
 bayesOpt            - User interface class.

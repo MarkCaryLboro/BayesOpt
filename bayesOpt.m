@@ -91,8 +91,20 @@ classdef bayesOpt
             % Set up the optimisation problem
             %--------------------------------------------------------------
             Problem.options.Display = "iter";
-            Problem.solver = "fmincon";
-            Problem.objective = @(X)obj.AcqObj.evalFcn( X, obj.AcqObj.Xi );
+            Problem.solver = "fmincon"; 
+            %==============================================================
+            % To Do: Generalise the acquisition function object to have a
+            % hyper-parameter Dependent property that is an abstract member
+            %==============================================================
+            switch lower( class( obj.AcqObj ) )
+                case 'ei'
+                    Problem.objective = @(X)obj.AcqObj.evalFcn( X,...
+                                                       obj.AcqObj.Xi );
+                case 'ucb'
+                    B = obj.AcqObj.sampleGamma( numel (obj.Y) );
+                    Problem.objective = @(X)obj.AcqObj.evalFcn( X, B );
+                otherwise
+            end
             if isinf( obj.AcqObj.BestX )
                 %----------------------------------------------------------
                 % Select a strating point

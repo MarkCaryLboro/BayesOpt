@@ -1,12 +1,12 @@
 A group of classes to implement the Bayesian Optimisation algorithm. Several
 surrogate models and acquisition function approaches are implemented.
 
-Requires version 2022a of Matlab:
+Requires version 2022a of Matlab or later:
 Required toolboxes: optimisation, statistics and machine learning
 
 List of classes:
 
-bayesOpt            - User interface class.
+bayesOpt            - Master class. Implements the Bayesian Optimisation algorithm.
 acqFcn              - An abstract class defining the acquisition function interface and
                       a template method to maximise the function.
 expectedImprovement - Concrete EI acquisition function implementation

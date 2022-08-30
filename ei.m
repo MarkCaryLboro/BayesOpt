@@ -14,7 +14,7 @@ classdef ei < acqFcn
             %--------------------------------------------------------------
             % Expected Improvement (EI) class constructor
             %
-            % obj = ei( Type, ModelObj, Xi );
+            % obj = ei( ModelObj, Xi );
             %
             % Input Arguments:
             %
@@ -37,7 +37,7 @@ classdef ei < acqFcn
             % Evaluate the EI acquisition function at the location
             % specified
             %
-            % Fcn = obj.evalFcn( X, Alpha );
+            % Fcn = obj.evalFcn( X, Xi );
             %
             % Input Arguments:
             %

@@ -155,7 +155,7 @@ classdef gpr < surrogateModel
             %--------------------------------------------------------------
             % Model predictions
             %
-            % Y = obj.predict( Xnew, Alpha );
+            % [ Ypred, Ysd, Yint ] = obj.predict( Xnew, Alpha );
             %
             % Input Argumentss:
             %
